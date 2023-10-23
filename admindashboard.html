@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Admin Dashboard</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        body::before {
+            content: "Admin Dashboard";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(to right, white, red, green);
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            font-size: 70px;
+            font-weight: bold;
+            z-index: 1;
+        }
+
+        .container {
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px 0px #888;
+            text-align: center;
+            max-width: 1800px;
+            width: 100%;
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .vertical-rectangular {
+            background: linear-gradient(to right, #96f08a, #3fee3f);
+            padding: 20px;
+            border: 1px solid #4682B4;
+            text-align: center;
+            resize: both;
+            overflow: auto;
+            margin-top: 60px;
+            margin-right: 10px;
+            margin-left: 20px;
+            width: 25%;
+            height: 450px;
+            border-radius: 10px;
+        }
+
+        .resizable-container {
+            background: linear-gradient(to right, #87CEEB, #f1f1f1);
+            padding: 20px;
+            border: 1px solid #4682B4;
+            text-align: center;
+            margin-top: 60px;
+            margin-right: 20px;
+            resize: both;
+            overflow: auto;
+            width: 95%;
+            height: 450px;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .inner-square {
+            background: linear-gradient(to right, #e06060, #e93c3c);
+            padding: 0;
+            border: 1px solid #0c0b0c;
+            text-align: center;
+            resize: both;
+            overflow: auto;
+            border-radius: 10px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 99.8%;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .footer {
+            background: linear-gradient(to right, white, red, green);
+            font-size: 12px;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+        }
+
+        .chart-container {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .menu-link {
+            text-decoration: none;
+            color: #000;
+            font-weight: normal;
+            transition: font-weight 0.2s;
+        }
+
+        .menu-link:hover {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="vertical-rectangular">
+            <a class="menu-link" href="admindashboard.html" id="dashboard-link">Dashboard</a>
+            <br>
+            <a class="menu-link" href="records.html">Records</a>
+            <br>
+            <a class="menu-link" href="profile.html">Profile</a>
+        </div>
+        <div class="square resizable-container">
+            <div class="inner-square">
+                <h2>Dashboard</h2>
+            </div>
+            <div class="chart-container">
+                <h2>Analytics</h2>
+                <div>
+                    <h3>Pest Control Analytics</h3>
+                    <canvas id="pestControlChart" width="400" height="200"></canvas>
+                </div>
+                <div>
+                    <h3>Water Station Analytics</h3>
+                    <canvas id="waterStationChart" width="400" height="200"></canvas>
+                </div>
+                <div>
+                    <h3>Bookkeeping Analytics</h3>
+                    <canvas id="bookkeepingChart" width="400" height="200"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        &copy; 2023 ADS Batangas Pest Control Services
+    </div>
+
+    <script>
+        // JavaScript for generating analytics charts using Chart.js
+        var pestControlData = {
+            labels: ["Customers", "Revenue", "Expenses"],
+            datasets: [{
+                data: [30, 5000, 1500],
+                backgroundColor: ["#ff6b6b", "#ffa500", "#87ceeb"]
+            }]
+        };
+
+        var waterStationData = {
+            labels: ["Water Sales", "Revenue", "Expenses"],
+            datasets: [{
+                data: [10000, 8000, 2000],
+                backgroundColor: ["#87ceeb", "#ffa500", "#ff6b6b"]
+            }]
+        };
+
+        var bookkeepingData = {
+            labels: ["Income", "Expenses"],
+            datasets: [{
+                data: [8000, 2000],
+                backgroundColor: ["#87ceeb", "#ff6b6b"]
+            }]
+        };
+
+        var pestControlChartTitle = "Pest Control Analytics";
+        var waterStationChartTitle = "Water Station Analytics";
+        var bookkeepingChartTitle = "Bookkeeping Analytics";
+
+        var pestControlChart = new Chart(document.getElementById('pestControlChart'), {
+            type: 'bar',
+            data: pestControlData,
+            options: {
+                plugins: {
+                    title: {
+                        display: true,
+                        text: pestControlChartTitle,
+                    }
+                }
+            }
+        });
+
+        var waterStationChart = new Chart(document.getElementById('waterStationChart'), {
+            type: 'pie',
+            data: waterStationData,
+            options: {
+                plugins: {
+                    title: {
+                        display: true,
+                        text: waterStationChartTitle,
+                    }
+                }
+            }
+        });
+
+        var bookkeepingChart = new Chart(document.getElementById('bookkeepingChart'), {
+            type: 'line',
+            data: bookkeepingData,
+            options: {
+                plugins: {
+                    title: {
+                        display: true,
+                        text: bookkeepingChartTitle,
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

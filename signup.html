@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sign Up</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles2.css"> <!-- Import your CSS styles from an external file -->
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <h3>ADS Batangas<br>Pest Control Services</h3>
+            <div class="tagline">
+                A decade of<br>quality service, experience, and dedication<br>in the pest control industry!
+            </div>
+        </div>
+        <div class="header-buttons">
+            <a class="home button" href="homepage.html">Home</a>
+            <a class="login button" href="login.html">Log In</a>
+
+        </div>
+    </header>
+    <div class="container">
+        <h2>Sign Up</h2>
+        <form id="signup-form">
+            <label for="new-username">Username:</label>
+            <input type="text" id="new-username" name="new-username" placeholder="Username" required>
+
+             <!-- Add the Email field -->
+             <label for="new-email">Email:</label>
+             <input type="email" id="new-email" name="new-email" placeholder="Email" required>
+
+            <label for="new-password">Password:</label>
+            <input type="password" id="new-password" name="new-password" placeholder="Password" required>
+
+             <!-- Password Confirmation Field -->
+             <label for="confirm-password">Confirm Password:</label>
+             <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm Password" required>
+
+             <input type="submit" class="button" value="Sign Up">
+        </form>
+        <div class="error-message" id="signup-error-message"></div>
+    </div>
+
+    <div class="footer">
+        &copy; 2023 ADS Batangas Pest Control Services
+    </div>
+
+    <script>
+        document.getElementById("signup-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            var newUsername = document.getElementById("new-username").value;
+            var newEmail = document.getElementById("new-email").value;
+            var newPassword = document.getElementById("new-password").value;
+            var confirmPassword = document.getElementById("confirm-password").value;
+
+            // Implement your sign-up logic here, including validation and error handling
+            // For simplicity, this code example does not include the actual sign-up process
+        });
+    </script>
+</body>
+</html>

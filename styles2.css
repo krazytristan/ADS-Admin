@@ -1,0 +1,131 @@
+/* Add your custom styles for the login form */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(45deg, white, rgb(163, 67, 67), rgb(140, 79, 209));
+}
+
+.header {
+    background: linear-gradient(45deg, white, red, green);
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header h3 {
+    font-weight: bold;
+    font-size: 4rem;
+    margin: 0;
+    text-align: center;
+}
+
+.welcome {
+    font-size: 1.5rem;
+    margin: 20px;
+    text-align: center;
+    margin-top: 30px;
+    color: #555;
+    background: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.header .tagline {
+    font-style: italic;
+    text-align: center;
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+.header-buttons a.button {
+    background-color: #332b2b;
+    color: #fff;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 5px;
+    font-size: larger;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+/* Container Styles */
+.container {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 70px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 500px;
+    max-height: 350px;
+    margin: 0 auto;
+    margin-top: 100px;
+    position: relative;
+    z-index: 3;
+}
+
+h2 {
+    color: #333;
+}
+
+form {
+    width: 100%;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background-color: #332b2b; /* Match the style of buttons in login.html */
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 10px 30px; /* Adjusted button size for consistency */
+    font-size: larger; /* Match the style of buttons in login.html */
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #555; /* Match the style of buttons in login.html */
+}
+
+.error-message {
+    color: red;
+}
+
+.footer {
+    background: linear-gradient(45deg, white, red, green);
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    font-size: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

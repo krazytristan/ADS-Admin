@@ -1,0 +1,281 @@
+/* styles1.css */
+/* Add your custom styles for the login form */
+
+.container {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 500px;
+    max-height: 200px;
+    margin: 0 auto;
+    margin-top: 100px;
+    position: relative;
+    z-index: 3;
+}
+
+h2 {
+    color: #333;
+}
+
+form {
+    width: 100%;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.error-message {
+    color: red;
+}
+
+.header-buttons a.button {
+    background-color: #332b2b;
+    color: #fff;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 5px;
+    font-size: larger;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.header-buttons a.button:hover {
+    background-color: #555;
+}
+
+.container input[type="submit"] {
+    background-color: #332b2b;
+    color: #fff;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 5px;
+    font-size: larger;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.container input[type="submit"]:hover {
+    background-color: #555;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(45deg, white, rgb(163, 67, 67), rgb(140, 79, 209));
+}
+
+.header {
+    background: linear-gradient(45deg, white, red, green);
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header h3 {
+    font-weight: bold;
+    font-size: 4rem;
+    margin: 0;
+    text-align: center;
+}
+.welcome {
+    font-size: 1.5rem;
+    margin: 20px;
+    text-align: center;
+    margin-top: 30px;
+    color: #555;
+    background: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.header .tagline {
+    font-style: italic;
+    text-align: center;
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+.header-buttons button {
+    background-color: #332b2b;
+    color: #fff;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 5px;
+    font-size: larger;
+}
+
+.container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px; /* Adjusted top margin for better spacing */
+}
+
+.carousel-container {
+    position: relative;
+    margin-top: 50px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 10.0ss;
+}
+
+.carousel-slide {
+    flex: 0 0 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 550px;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-title {
+    background: linear-gradient(45deg, rgb(101, 115, 241), rgb(54, 47, 87), rgb(207, 172, 195));
+    color: #fff;
+    padding: 25px;
+    font-size: 28px;
+    font-weight: bold;
+    width: 100%;
+}
+
+.carousel-nav {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.carousel-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ccc;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.carousel-dot.active {
+    background-color: #555;
+    transform: scale(1.2);
+}
+
+.carousel-dot:hover {
+    background-color: #777;
+    transform: scale(1.2);
+}
+
+.carousel-dot img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.5);
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    transition: background 0.3s, transform 0.3s, color 0.3s;
+}
+
+.carousel-arrow-left {
+    left: 10px;
+    transition: left 0.3s;
+}
+
+.carousel-arrow-right {
+    right: 10px;
+    transition: right 0.3s;
+}
+
+.carousel-arrow:hover {
+    background: #555;
+    transform: translateY(-50%) scale(1.1);
+    color: #fff;
+}
+
+.footer {
+    background: linear-gradient(45deg, white, red, green);
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    font-size: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+/* Add your custom styles for the sign-up page */
+
+
+
+
